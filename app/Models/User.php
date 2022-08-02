@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'email', 'phone', 'password', 'role_id', 'school_id', 'email_verified_at'
     ];
 
     /**
@@ -28,6 +28,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function profile(){
+      return $this->hasOne(Profile::class);
+    }
+
+    public function school(){
+      return $this->belongsTo(School::class);
+    }
 
     /**
      * The attributes that should be cast to native types.
