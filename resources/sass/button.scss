@@ -1,0 +1,50 @@
+.app__button{
+    height: $form-height;
+    border-radius: $form-radius;
+    font-weight: $form-weight;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: $form-height;
+}
+.btn__purple{
+    background-color: $light-purple;
+    color: #fff;
+}
+.btn__outline__purple{
+    background: #fff;
+    color: $light-purple;
+    border: 1px solid $light-purple;
+}
+
+.btn__loader {
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #3498db;
+    width: 25px;
+    height: 25px;
+    -webkit-animation: btn__spin .8s linear infinite; /* Safari */
+    animation: btn__spin .8s linear infinite;
+}
+button:disabled{
+    opacity: 0.7;
+}
+
+/* Safari */
+@-webkit-keyframes btn__spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes btn__spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media (max-width: 500px) { 
+    .app__button {
+        height: 40px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 40px;
+    }
+}

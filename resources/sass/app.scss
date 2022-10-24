@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+body{
+    font-family: 'Mulish', sans-serif !important;
+}
+
+/* Color theme */
+$dark-purple: #1F1156;
+$light-purple: #6441E5;
+$fade-purple: #EFEDF3;
+$grey: #A2A2A2;
+$black: #1D1D1D;
+$img-box-shadow: 0px 2px 5px #999696;
+$app-card-shadow: 0px 0px 5px #b7b7b7;
+$app-card-shadow-sm: 0px 0px 5px #e3e3e3;
+$green-color: #51ae1e;
+$yellow-color: #ffc105;
+$red-color: #ff5050;
+
+// Border
+.border-red {
+    border: 1px solid $red-color !important;
+}
+.border-green {
+    border: 1px solid $green-color !important;
+}
+.border-yellow {
+    border: 1px solid $yellow-color !important;
+}
+
+/* Font size settings */
+@mixin header-one() {
+    color: $black;
+    @media (min-width: 500px) { 
+        font-size: 24px;
+        font-weight: bold;
+    }
+    @media (max-width: 500px) { 
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 28px;
+    }
+}
+
+@mixin header-two() {
+    font-size: 18px;
+    font-weight: bold
+}
+
+@mixin text-normal() {
+    font-size: 14px;
+    font-weight: 500
+}
+@mixin text-small() {
+    font-size: 10px;
+    font-weight: 500
+}
+@mixin button-text() {
+    font-size: 10px;
+    font-weight: 600
+}
+@mixin input-text() {
+    font-size: 10px;
+    font-weight: 600
+}
+@mixin notes-text() {
+    font-size: 8px;
+    font-weight: 600
+}
+
+/* Page padding */
+$header-padding-x: 30px;
+
+$form-radius: 4px;
+$form-height: 44px;
+$form-weight: 600;
+
+.text__black{
+    color: $black;
+}
+.text__grey{
+    color: $grey;
+}
+.text__green{
+    color: $green-color;
+}
+.text__yellow{
+    color: $yellow-color;
+}
+.text__red{
+    color: $red-color;
+}
+.bg__grey{
+    background-color: $grey;
+}
+.text__light__purple{
+    color: $light-purple;
+}
+.bg__light__purple{
+    background-color: $light-purple;
+}
+.text__dark__purple{
+    color: $dark-purple;
+}
+.bg__dark__purple{
+    background-color: $dark-purple;
+}
+
+
+.splide__arrow{
+    top: -44px !important;
+    background-color: transparent !important;
+}
+.splide__pagination{
+    display: none !important;
+}
+.app__box__shadow{
+    box-shadow: $app-card-shadow;
+}
+.app__box__shadow__sm{
+    box-shadow: $app-card-shadow-sm;
+}
+.app__input{
+    height: $form-height;
+    border-radius: $form-radius;
+    height: 44px;
+    border: 2px solid $grey;
+    padding: 0 10px;
+    line-height: 44px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    color: $grey;
+    font-weight: 600;
+
+    &:focus{
+        border: 2px solid $grey;
+    }
+}
+
+/* purgecss start ignore */
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@import 'style';
+@import 'datepicker';
+@import 'button';
+@import 'toastification';
+
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.info-msg {
+  color: #059;
+  background-color: #BEF;
+}
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warning-msg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+
+.Mndmo0__Sk3nD3jedS{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    right: 0;
+    left: 0;
+    min-height: 100vh;
+    background: $fade-purple;
+    overflow-y: auto;
+    padding: 30px;
+}
+.arrow__left__back{
+    padding: 0 10px 4px 0px;
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 10px;
+    }
+
+    span{
+        margin-left: 16px;
+        font-weight: 500;
+    }
+}
+
+#TrdcS23SBdhdbORw{
+    background-color: #fff;
+    padding: 43px 0;
+    margin-top: 40px;
+    position: relative;
+}
+
+.app__radio {
+    display: none;
+}
+  
+.app__radio + .app__radio__label {
+    padding: 8px 20px 8px 26px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+}
+.app__radio + .app__radio__label:after {
+    position: absolute;
+    content: "";
+    opacity: 0.5;
+    left: 0px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #00a651;
+    box-shadow: 0px 3px 3px rgb(0 0 0 / 25%) !important;
+}
+
+.app__radio:checked + .app__radio__label:before {
+    opacity: 1;
+}
+.app__radio:checked + .app__radio__label:after {
+    opacity: 1;
+    border-color: #fff;
+    background-color: #fff;
+    border: 6px solid #00a651;
+}
+.app__radio__box {
+    display: none;
+}
+  
+.app__radio__box + .app__radio__box__label {
+    padding: 8px 20px 8px 26px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+}
+.app__radio__box + .app__radio__box__label:after {
+    position: absolute;
+    content: "";
+    opacity: 0.5;
+    left: 0px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #00a651;
+    box-shadow: 0px 3px 3px rgb(0 0 0 / 25%) !important;
+}
+
+.app__radio__box:checked + .app__radio__box__label:before {
+    opacity: 1;
+}
+.app__radio__box:checked + .app__radio__box__label:after {
+    opacity: 1;
+    border-color: #fff;
+    background-color: #fff;
+    border: 6px solid #00a651;
+}
